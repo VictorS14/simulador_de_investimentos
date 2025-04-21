@@ -1,1 +1,23 @@
- 
+ * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+
+
+:root{
+    --bg-body: #fff;
+    --bg-container: #E3F6F5;
+
+    --bg-input: #D9D9D9;
+
+    --bg-button-asset-active: #3D3DBC;
+    --bg-button-asset-inactive: #69DF9C;
+    --bg-button-reset: #E35656;
+
+    --color-placeholder: #777474;
+
+    --primary-text-color: #272343;
+    --secondary-text-color: #2D334A;
+
+}
