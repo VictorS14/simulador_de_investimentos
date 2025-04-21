@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador de investimento</title>
+  </head>
+  <body>
+    <header></header>
+    <div class="container">
+      <section class="section-investment-options">
+        <h1>Opeção de Ativo</h1>
+        <button class="asset-option">Tesouro Prefixado</button>
+        <button class="asset-option">Tesouro IPCA+</button>
+        <button class="asset-option">Tesouro Selic</button>
+        <button class="asset-option">LCI e LCA</button>
+        <button class="asset-option">CDB e LC</button>
+      </section>
+
+      <section class="section-form">
+        <form>
+          <div class="form-group">
+            <label for="amountInvested"
+              >Valor à ser aplicado:
+              <small>*Obriatório*</small>
+            </label>
+            <input 
+            type="number" 
+            id="amountInvested" 
+            name="amountInvested" 
+            placeholder="R$ 0,00"/>
+          </div>
+
+          <div class="form-group">
+            <label for="monthlyInvestment"
+              >Investimento mensal (opcional):</label
+            >
+            <input
+              type="number"
+              id="monthlyInvestment"
+              name="monthlyInvestment"
+              placeholder="R$ 0,00"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="term"
+              >Prazo:
+              <small>*Obriatório*</small>
+            </label>
+            <input type="number" id="term" name="term" />
+            <select name="termOption" id="optionTerm">
+              <option value="meses" selected>Meses</option>
+              <option value="anos">Anos</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="amountInvested"
+              >Tipo de rentabilidade:
+              <small>*Obriatório*</small>
+            </label>
+            <select name="rentabilityType" id="rentabilityType">
+              <option value="choice" selected>Escolha</option>
+              <option value="prefixed">Prefixado</option>
+            </select>
+
+            <div class="rentability-rate">
+              <label for="rateInput"
+                >Selecione a Taxa de rentabilidade (%):</label
+              >
+              <input
+                type="number"
+                step="0.01"
+                id="rateInput"
+                name="rateInput"
+              />
+            </div>
+          </div>
+          <div class="buttons">
+            <button>Simular</button>
+            <button>Reiniciar</button>
+          </div>
+         
+        </form>
+      </section>
+
+      <section class="section-results">
+        <h2>Resultado</h2>
+        <div class="retults-container">
+            <div class="result-item">
+                <h4>Valor Total Investido</h4>
+                <p id="totalInvested"></p>
+            </div>
+            <div class="result-item">
+                <h4>Rendimento Total</h4>
+                <p id="totalEarnings"></p>
+            </div>
+            <div class="result-item">
+                <h4>Imposto de Renda à ser Pago</h4>
+                <p id="tax"></p>
+            </div>
+            <div class="result-item">
+                <h4>Montante final</h4>
+                <p id="finalAmount"></p>
+            </div>
+            <button class="newSimulation">Refazer Simulação</button>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
