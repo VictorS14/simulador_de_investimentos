@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Simulador de investimento</title>
   </head>
   <body>
-    <header></header>
+    <header>Aqui vai icone</header>
     <div class="container">
       <section class="section-investment-options">
         <h1>Opeção de Ativo</h1>
@@ -85,9 +86,37 @@
         </form>
       </section>
 
-      <section class="section-results">
-        <h2>Resultado</h2>
+      <section class="section-results" style="display: none;">
+        <div class="area-data">
+          <h2>Seus parâmetros</h2>
+          <div class="data-item">
+            <h4>Tipo de investimento:</h4>
+            <p class="asset"></p>
+
+          <div class="data-item">
+            <h4>PRÉ ou PÓS fixido?</h4>
+            <p class="asset"></p>
+          </div>
+          <div class="data-item">
+            <h4>Valor Investido:</h4>
+            <p class="asset"></p>
+          </div>
+          <div class="data-item">
+            <h4>Investimento mensal:</h4>
+            <p class="asset"></p>
+          </div>
+          <div class="data-item">
+            <h4>Prazo:</h4>
+            <p class="asset"></p>
+          </div>
+          <div class="data-item">
+            <h4>Rentabilidade:</h4>
+            <p class="asset"></p>
+          </div>
+        </div>
+
         <div class="retults-container">
+          <h2>Resultado</h2>
             <div class="result-item">
                 <h4>Valor Total Investido</h4>
                 <p id="totalInvested"></p>
