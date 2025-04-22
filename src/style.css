@@ -19,5 +19,87 @@
 
     --primary-text-color: #272343;
     --secondary-text-color: #2D334A;
-
 }
+
+/* Mobile firts */
+
+body {
+    background-color: rgb(177, 174, 174);
+    font-family: 'Poppins', sans-serif;
+    padding: 28px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+}
+
+.container header {
+    width: 	50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.container .title {
+    color: var(--primary-text-color);
+}
+
+.content {
+    background-color: var(--bg-container);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 24px;
+    border-radius: 4px;
+    gap: 20px;
+}
+
+.container .content .section-investment-options {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    border: solid 1px red;
+    
+    & h1 {
+        color: var(--primary-text-color);
+        align-self: flex-start;
+    }
+
+    & .asset-option {
+        width: 100%;
+        height: 42px;
+        text-align: center;
+        color: var(--secondary-text-color);
+        font-size: 1rem;
+        font-weight: 600;
+        background-color: var(--bg-button-asset-inactive);
+        border: none;
+        border-radius: 12px;
+        transition: all .2s ease-in-out;
+    }
+
+    &  .asset-option.default {
+        background-color: var(--bg-button-asset-active);
+        color: white;
+    }
+
+    & .asset-option:hover{
+        background-color: #6464ed;
+        color: white;
+    }
+}
+
