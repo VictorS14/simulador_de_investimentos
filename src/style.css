@@ -24,7 +24,8 @@
 /* Mobile firts */
 
 body {
-    background-color: rgb(177, 174, 174);
+    /* background-color: rgb(177, 174, 174); */
+    background-color: white;
     font-family: 'Poppins', sans-serif;
     padding: 28px 28px;
     display: flex;
@@ -72,8 +73,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 14px;
-    border: solid 1px red;
-    
+
     & h1 {
         color: var(--primary-text-color);
         align-self: flex-start;
@@ -97,9 +97,148 @@ body {
         color: white;
     }
 
-    & .asset-option:hover{
+    /* & .asset-option:hover{
         background-color: #6464ed;
         color: white;
+    } */
+}
+
+.container .section-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        gap: 20px;
+
+        & .form-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            & label {
+                color: var(--secondary-text-color);
+                font-size: 1rem;
+            }
+
+            & small {
+                color: var(--bg-button-reset);
+            }
+
+            & input {
+                width: 100%;
+                height: 38px;
+                display: flex;
+                text-align: right;
+                align-items: center;
+                padding: 0 12px;
+                border: none;
+                border-radius: 4px;
+                color: var(--color-placeholder);
+            }
+        }
+
+        & .form-group:nth-child(3) {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            /* justify-content: space-between; */
+
+            & .term-input{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                & label {
+                    color: var(--secondary-text-color);
+                    font-size: 1rem;
+                }
+
+                & input {
+                    width: 225px;
+                    height: 38px;
+                    display: flex;
+                    text-align: left;
+
+                }
+            }
+
+            & select {
+                background-color: white;
+                width: 225px;
+                height: 38px;
+                padding: 0 8px;
+                border: none;
+                border-radius: 8px;
+                color: var(--secondary-text-color);
+            }
+        }
+
+        & .form-group:nth-child(4) {
+            gap: 12px;
+
+            & label{
+                color: var(--secondary-text-color);
+                font-size: 1rem;
+            }
+
+            & select {
+                background-color: white;
+                width: 100%;
+                height: 38px;
+                padding: 0 8px;
+                border: none;
+                border-radius: 8px;
+                color: var(--secondary-text-color)                
+            }
+
+            & .rentability-rate {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                & input {
+                    width: 140px;
+
+                }
+            }
+        }
+
+        & .buttons {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            & button {
+                width: 100px;
+                height: 38px;
+                color: white; 
+                font-size: 14px;
+                font-weight: 500;
+                border: none;
+                border-radius: 8px;
+                background-color: var(--bg-button-asset-active);  
+                transition: all .1s ease-in-out;             
+            }
+
+            & button:nth-child(1):hover{
+                background-color: #6464ed;
+            }
+
+            & button:nth-child(2){
+                background-color: var(--bg-button-reset);
+            }
+
+            & button:nth-child(2):hover{
+                background-color: #ae3737;
+            }
+        }
     }
 }
 

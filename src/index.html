@@ -21,7 +21,7 @@
           <button class="asset-option">CDB e LC</button>
         </section>
   
-        <section class="section-form" style="display: none;">
+        <section class="section-form">
           <form>
             <div class="form-group">
               <label for="amountInvested"
@@ -48,11 +48,14 @@
             </div>
   
             <div class="form-group">
-              <label for="term"
-                >Prazo:
-                <small>*Obriatório*</small>
-              </label>
-              <input type="number" id="term" name="term" />
+              <div class="term-input">
+                <label for="term"
+                  >Prazo:
+                  <small>*Obriatório*</small>
+                </label>
+                <input type="number" id="term" name="term" />
+              </div>
+
               <select name="termOption" id="optionTerm">
                 <option value="meses" selected>Meses</option>
                 <option value="anos">Anos</option>
@@ -60,7 +63,7 @@
             </div>
   
             <div class="form-group">
-              <label for="amountInvested"
+              <label
                 >Tipo de rentabilidade:
                 <small>*Obriatório*</small>
               </label>
@@ -69,7 +72,7 @@
                 <option value="prefixed">Prefixado</option>
               </select>
   
-              <div class="rentability-rate">
+              <div class="rentability-rate" style="display: none;">
                 <label for="rateInput"
                   >Selecione a Taxa de rentabilidade (%):</label
                 >
