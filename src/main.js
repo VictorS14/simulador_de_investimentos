@@ -1,5 +1,4 @@
-
-import {formatCurrency, currencyToNumber, formatCurrencyToDisplay} from "./modulos/currencyUtils.js";
+import { formatCurrency, currencyToNumber, formatCurrencyToDisplay } from "./modulos/currencyUtils.js";
 import { calculateMonthlySimulation, calculateYearSimulation, calculateTax } from "./modulos/simulation.js";
 import { resetSimulationForm } from "./modulos/domHandlers.js";
 import { taxs } from "./modulos/constants.js";
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const amountInput = document.getElementById("amountInvested");
   const monthlyInput = document.getElementById("monthlyInvestment");
-
 
   amountInput.addEventListener("input", () => formatCurrency(amountInput));
   monthlyInput.addEventListener("input", () => formatCurrency(monthlyInput));
@@ -74,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalInvested = amount + monthlyInvestment * monthsToCalculate;
     const earnings = finalAmount - totalInvested;
     const taxAmount = calculateTax(earnings, term);
-    const finalAmountAfterTax = finalAmount - taxAmount;
+    const finalAmountAfterTax = earnings - taxAmount;
 
     const sectionResults = document.querySelector(".section-results");
     const sectionInvestmentOptions = document.querySelector(".section-investment-options");
@@ -87,8 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let rentability = rateInput > 0 ? rateInput : getRentability(selectedAsset);
 
     sectionResults.innerHTML = /*html*/ `
+    <h2>Seus parâmetros</h2>
       <div class="area-data">
-        <h2>Seus parâmetros</h2>
         <div class="data-item">
           <h4>Tipo de investimento:</h4>
           <p class="asset">${selectedAsset}</p>
@@ -117,21 +115,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <div class="results-container">
         <h2>Resultado</h2>
-        <div class="result-item">
-            <h4>Valor Total Investido</h4>
-            <p id="totalInvested">${formatCurrencyToDisplay(totalInvested)}</p>
-        </div>
-        <div class="result-item">
-            <h4>Rendimento Total bruto</h4>
-            <p id="totalEarnings">${formatCurrencyToDisplay(earnings)}</p>
-        </div>
-        <div class="result-item">
-            <h4>Imposto de Renda à ser Pago</h4>
-            <p id="tax">${formatCurrencyToDisplay(taxAmount)}</p>
-        </div>
-        <div class="result-item">
-            <h4>Montante final com Impostos</h4>
-            <p id="finalAmount">${formatCurrencyToDisplay(finalAmountAfterTax)}</p>
+        <div class="result-items-wrapper">
+            <div class="result-item">
+                <h4>Valor Total Investido</h4>
+                <p id="totalInvested">${formatCurrencyToDisplay(totalInvested)}</p>
+            </div>
+            <div class="result-item">
+                <h4>Rendimento Total bruto</h4>
+                <p id="totalEarnings">${formatCurrencyToDisplay(earnings)}</p>
+            </div>
+            <div class="result-item">
+                <h4>Imposto de Renda à ser Pago</h4>
+                <p id="tax">${formatCurrencyToDisplay(taxAmount)}</p>
+            </div>
+            <div class="result-item">
+                <h4>Montante final com Impostos</h4>
+                <p id="finalAmount">${formatCurrencyToDisplay(finalAmountAfterTax)}</p>
+            </div>
         </div>
         <button id="btnResetSimulation" class="newSimulation">Refazer Simulação</button>
       </div>
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
       sectionInvestmentOptions.style.display = "flex";
       sectionForm.style.display = "block";
 
-      resetSimulationForm()
+      resetSimulationForm();
 
       assetBtn.forEach((btn, index) => {
         if (index === 0) {
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (btnReset) {
     btnReset.addEventListener("click", () => {
-     resetSimulationForm();
+      resetSimulationForm();
     });
   }
 });
