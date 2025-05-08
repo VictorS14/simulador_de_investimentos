@@ -3,50 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Simulador de investimento</title>
   </head>
   <body>
     <div class="container">
-      <header><img src="../assets/images/bank.svg" alt="Logo de um banco"></header>
+      <header><img src="../assets/images/bank.svg" alt="Logo de um banco" /></header>
       <h2 class="title">Simulador de Investimentos</h2>
       <div class="content">
-
-        <section class="section-investment-options" >
+        <section class="section-investment-options">
           <h1>Opções de Ativo</h1>
-          <button class="asset-option default">Tesouro Prefixado</button>
-          <button class="asset-option">Tesouro IPCA+</button>
-          <button class="asset-option">Tesouro Selic</button>
-          <button class="asset-option">LCI e LCA</button>
-          <button class="asset-option">CDB e LC</button>
+          <div class="asset-option-container">
+            <button class="asset-option default">Tesouro Prefixado</button>
+            <button class="asset-option">Tesouro IPCA+</button>
+            <button class="asset-option">Tesouro Selic</button>
+            <button class="asset-option">LCI e LCA</button>
+            <button class="asset-option">CDB e LC</button>
+          </div>
         </section>
-  
-        <section class="section-form" >
+
+        <section class="section-form">
           <form>
             <div class="form-group">
               <label for="amountInvested"
                 >Valor à ser aplicado:
                 <small>*Obrigatório*</small>
               </label>
-              <input 
-              type="text" 
-              id="amountInvested" 
-              name="amountInvested" 
-              placeholder="R$ 0,00"/>
+              <input type="text" id="amountInvested" name="amountInvested" placeholder="R$ 0,00" />
             </div>
-  
+
             <div class="form-group">
-              <label for="monthlyInvestment"
-                >Investimento mensal (opcional):</label
-              >
-              <input
-                type="text"
-                id="monthlyInvestment"
-                name="monthlyInvestment"
-                placeholder="R$ 0,00"
-              />
+              <label for="monthlyInvestment">Investimento mensal (opcional):</label>
+              <input type="text" id="monthlyInvestment" name="monthlyInvestment" placeholder="R$ 0,00" />
             </div>
-  
+
             <div class="form-group">
               <div class="term-input">
                 <label for="term"
@@ -61,33 +51,28 @@
                 <option value="years">Anos</option>
               </select>
 
-              <div class="rentability-rate" >
+              <div class="rentability-rate">
                 <label for="rateInput"
                   >Selecione a Taxa de rentabilidade (%):
-                  <br>
-                  <small style="color: blue;">OBS: (Apenas se não quiser a Taxa prefixada do Ativo selecionado ou se quiser uma Taxa atualizada)</small>
-                  </label
-                >
-                <input
-                  type="number"
-                  step="0.01"
-                  id="rateInput"
-                  name="rateInput"
-                  placeholder="%"
-                />
+                  <br />
+                  <small style="color: blue"
+                    >OBS: (Apenas se não quiser a Taxa prefixada do Ativo selecionado ou se quiser uma Taxa
+                    atualizada)</small
+                  >
+                </label>
+                <input type="number" step="0.01" id="rateInput" name="rateInput" placeholder="%" />
               </div>
             </div>
             <div class="buttons">
               <button id="btnSimulate">Simular</button>
               <button id="btnReset">Reiniciar</button>
             </div>
-           
           </form>
         </section>
-  
-        <section class="section-results" style="display: none;">
+
+        <section class="section-results" style="display: none">
+          <h2>Seus parâmetros</h2>
           <div class="area-data">
-            <h2>Seus parâmetros</h2>
             <div class="data-item">
               <h4>Tipo de investimento:</h4>
               <p class="asset">12.000</p>
@@ -113,26 +98,29 @@
               <p class="asset">14.24%</p>
             </div>
           </div>
-  
+
           <div class="results-container">
-            <h2>Resultado</h2> 
+            <h2>Resultado</h2>
+            <div class="result-items-wrapper">
               <div class="result-item">
-                  <h4>Valor Total Investido</h4>
-                  <p id="totalInvested">400.000</p>
+                <h4>Valor Total Investido</h4>
+                <p id="totalInvested">400.000</p>
               </div>
               <div class="result-item">
-                  <h4>Rendimento Total bruto</h4>
-                  <p id="totalEarnings">50.000.000</p>
+                <h4>Rendimento Total bruto</h4>
+                <p id="totalEarnings">50.000.000</p>
               </div>
               <div class="result-item">
-                  <h4>Imposto de Renda à ser Pago</h4>
-                  <p id="tax">350.000</p>
+                <h4>Imposto de Renda à ser Pago</h4>
+                <p id="tax">350.000</p>
               </div>
               <div class="result-item">
-                  <h4>Montante final com Impostos</h4>
-                  <p id="finalAmount">47.650.000</p>
+                <h4>Montante final com Impostos</h4>
+                <p id="finalAmount">47.650.000</p>
               </div>
-              <button id="btnResetSimulation" class="newSimulation">Refazer Simulação</button>
+
+            </div>
+            <button id="btnResetSimulation" class="newSimulation">Refazer Simulação</button>
           </div>
         </section>
       </div>
