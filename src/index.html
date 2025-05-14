@@ -68,6 +68,39 @@
               <button id="btnReset">Reiniciar</button>
             </div>
           </form>
+
+          <p class="description">
+            Esta aplicação é um simulador de investimentos que permite calcular o retorno de diferentes tipos
+            de ativos financeiros. Você pode simular investimentos em Tesouro Direto (Prefixado, IPCA+ e
+            Selic), LCI, LCA e CDBs. Insira o valor inicial, aportes mensais, prazo e taxa de rentabilidade
+            para ver projeções de rendimento e impostos.
+          </p>
+
+          <div class="tabelaDeAtivos">
+            <h4>Tabela de Ativos e Taxas Prefixadas</h4>
+            <table>
+              <tr>
+                <td>Tesouro Prefixado</td>
+                <td>12.69%</td>
+              </tr>
+              <tr>
+                <td>Tesouro IPCA+</td>
+                <td>7.58%</td>
+              </tr>
+              <tr>
+                <td>Tesouro Selic</td>
+                <td>14.25%</td>
+              </tr>
+              <tr>
+                <td>LCI e LCA</td>
+                <td>10.4%</td>
+              </tr>
+              <tr>
+                <td>CBD</td>
+                <td>13.15%</td>
+              </tr>
+            </table>
+          </div>
         </section>
 
         <section class="section-results" style="display: none">
@@ -118,7 +151,6 @@
                 <h4>Montante final com Impostos</h4>
                 <p id="finalAmount">47.650.000</p>
               </div>
-
             </div>
             <button id="btnResetSimulation" class="newSimulation">Refazer Simulação</button>
           </div>
