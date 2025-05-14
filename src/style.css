@@ -127,6 +127,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 
   & form {
     width: 100%;
@@ -272,6 +273,40 @@ body {
       }
     }
   }
+
+  & .description {
+    line-height: 1.5rem;
+    color: var(--secondary-text-color);
+  }
+
+  & .tabelaDeAtivos {
+      width: 100%;
+
+     & table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background-color: white;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  
+      & td {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ddd;
+        color: var(--secondary-text-color);
+      }
+  
+      & tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+  
+      & tr:hover {
+        background-color: #ddd;
+      }
+    }
+
+  }
+
 }
 
 .container .content .section-results {
