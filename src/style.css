@@ -129,6 +129,10 @@ body {
   align-items: center;
   gap: 20px;
 
+  & > * {
+    width: 100%;
+  }
+
   & form {
     width: 100%;
     display: flex;
@@ -275,12 +279,15 @@ body {
   }
 
   & .description {
+    width: 100%;
     line-height: 1.5rem;
     color: var(--secondary-text-color);
+    margin: 20px 0;
   }
 
   & .tabelaDeAtivos {
       width: 100%;
+      margin-top: 20px;
 
      & table {
       width: 100%;
