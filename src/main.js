@@ -2,7 +2,7 @@ import { formatCurrency, currencyToNumber, formatCurrencyToDisplay } from "./mod
 import { calculateMonthlySimulation, calculateYearSimulation, calculateTax } from "./modulos/simulation.js";
 import { resetSimulationForm } from "./modulos/domHandlers.js";
 import { taxs } from "./modulos/constants.js";
-import { getRentability } from "./modulos/simulation.js";
+import { getAssetRentability } from "./modulos/constants.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const assetBtn = document.querySelectorAll(".asset-option");
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const totalInvested = amount + monthlyInvestment * monthsToCalculate;
     const earnings = finalAmount - totalInvested;
-    const taxAmount = calculateTax(earnings, term);
+    const taxAmount = calculateTax(earnings, term, selectedAsset);
     const finalAmountAfterTax = earnings - taxAmount;
 
     const sectionResults = document.querySelector(".section-results");
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sectionForm.style.display = "none";
     sectionResults.style.display = "block";
 
-    let rentability = rateInput > 0 ? rateInput : getRentability(selectedAsset);
+    let rentability = rateInput > 0 ? rateInput : getAssetRentability(selectedAsset);
 
     sectionResults.innerHTML = /*html*/ `
     <h2>Seus parâmetros</h2>
@@ -126,7 +126,9 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <div class="result-item">
                 <h4>Imposto de Renda à ser Pago</h4>
-                <p id="tax">${formatCurrencyToDisplay(taxAmount)}</p>
+                <p id="tax">${
+                  selectedAsset === "LCI e LCA" ? "Isento de Imposto" : formatCurrencyToDisplay(taxAmount)
+                }</p>
             </div>
             <div class="result-item">
                 <h4>Montante final com Impostos</h4>
