@@ -8,12 +8,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const assetBtn = document.querySelectorAll(".asset-option");
   const btnSimulate = document.getElementById("btnSimulate");
   const btnReset = document.getElementById("btnReset");
-
+  const termInput = document.getElementById("term");
+  
   const amountInput = document.getElementById("amountInvested");
   const monthlyInput = document.getElementById("monthlyInvestment");
 
   amountInput.addEventListener("input", () => formatCurrency(amountInput));
   monthlyInput.addEventListener("input", () => formatCurrency(monthlyInput));
+  termInput.addEventListener("input", (e) => {
+    // Remove tudo que não for número
+    e.target.value = e.target.value.replace(/\D/g, "");
+  });
+
 
   let selectedTermOption = "month";
   const optionTerm = document.getElementById("optionTerm");
@@ -48,8 +54,16 @@ document.addEventListener("DOMContentLoaded", () => {
       <p class="loading-text">Calculando sua simulação...</p>
     `;
 
-    document.body.appendChild(loadingOverlay);
+    const amount = currencyToNumber(document.getElementById("amountInvested").value);
+    const term = parseFloat(document.getElementById("term").value);
     
+    if(isNaN(amount) || isNaN(term) || term === 0 || amount <= 0) {
+       alert("Você precisa inserir o Valor e o Prazo para realizar a simulação");
+      return
+    }
+    
+    document.body.appendChild(loadingOverlay);
+
     setTimeout(() => {
       const amount = currencyToNumber(document.getElementById("amountInvested").value);
       const monthlyInvestment = currencyToNumber(document.getElementById("monthlyInvestment").value);
