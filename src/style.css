@@ -351,11 +351,13 @@ body {
       & h4 {
         color: var(--text-color-title-data-item);
         font-weight: 600;
+        font-size: clamp(0.625rem,3vw,1rem);
       }
 
       & .asset {
         color: var(--text-color-data-input);
         font-weight: 600;
+        font-size: clamp(0.625rem,3vw,1rem);
       }
     }
   }
@@ -390,6 +392,7 @@ body {
       & h4 {
         color: var(--primary-text-color);
         font-weight: 600;
+        font-size: clamp(0.875rem,2vw,1rem)
       }
 
       & p {
@@ -503,6 +506,9 @@ body {
 
       & label {
         font-size: 11px;
+      }
+      & input {
+        align-self: end;
       }
     }
   }
