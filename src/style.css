@@ -65,6 +65,7 @@ body {
 
 .container .title {
   color: var(--primary-text-color);
+  font-size: clamp(0.625rem,5vw,2rem);
 }
 
 .content {
@@ -101,7 +102,7 @@ body {
       height: 42px;
       text-align: center;
       color: var(--secondary-text-color);
-      font-size: 1rem;
+      font-size: clamp(0.625rem, 4vw, 1rem);
       font-weight: 600;
       background-color: var(--bg-button-asset-inactive);
       border: none;
@@ -115,11 +116,6 @@ body {
     background-color: var(--bg-button-asset-active);
     color: white;
   }
-
-  /* & .asset-option:hover{
-        background-color: #6464ed;
-        color: white;
-    } */
 }
 
 .container .content .section-form {
@@ -137,7 +133,6 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     gap: 20px;
 
     & .form-group {
@@ -172,8 +167,6 @@ body {
       display: flex;
       flex-direction: column;
       gap: 18px;
-      /* border: solid 1px red; */
-      /* justify-content: space-between; */
 
       & .term-input {
         /* border: solid 1px blue; */
@@ -233,17 +226,6 @@ body {
         border-radius: 8px;
         color: var(--secondary-text-color);
       }
-
-      /* & .rentability-rate {
-                display: flex;
-                flex-direction: column;
-                gap: 12px;
-
-                & input {
-                    width: 140px;
-
-                }
-            } */
     }
 
     & .buttons {
@@ -321,7 +303,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2.2rem;
-  /* border: solid 1px red; */
 
   & h2 {
     color: var(--primary-text-color);
@@ -334,7 +315,6 @@ body {
     flex-direction: column;
     gap: 12px;
     margin-bottom: 2.2rem;
-    /* border: solid 1px green; */
     
     
     & .data-item {
