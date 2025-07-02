@@ -32,13 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
       button.addEventListener("click", () => {
         assetBtn.forEach((btn) => {
           btn.classList.remove("default");
-          btn.style.backgroundColor = "var(--bg-button-asset-inactive)";
-          btn.style.color = "var(--secondary-text-color)";
         });
-
         button.classList.add("default");
-        button.style.backgroundColor = "var(--bg-button-asset-active)";
-        button.style.color = "#FFFFFF";
       });
     });
   }
@@ -171,15 +166,8 @@ document.addEventListener("DOMContentLoaded", () => {
         resetSimulationForm();
     
         assetBtn.forEach((btn, index) => {
-          if (index === 0) {
-            btn.classList.add("default");
-            btn.style.backgroundColor = "var(--bg-button-asset-active)";
-            btn.style.color = "#FFFFFF";
-          } else {
-            btn.classList.remove("default");
-            btn.style.backgroundColor = "var(--bg-button-asset-inactive)";
-            btn.style.color = "var(--secondary-text-color)";
-          }
+          if(index !== 0) return btn.classList.remove("default");
+          btn.classList.add("default");
         });
       });
       
