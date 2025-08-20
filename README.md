@@ -1,5 +1,8 @@
 ## Simulador de Investimentos 🏦
 
+### 🌐 Link do Projeto
+[Acesse o Simulador de Investimentos](https://simulador-de-investimentos-tdc6.vercel.app/)
+
 ### 📋 Descrição
 Um simulador web interativo que permite calcular retornos de diferentes tipos de investimentos em renda fixa do mercado brasileiro, incluindo Tesouro Direto, LCI, LCA e CDBs.
 
