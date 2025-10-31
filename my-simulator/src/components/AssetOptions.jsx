@@ -20,7 +20,7 @@ export const AssetOptions = ({ selectedAsset, onAssetChange }) => {
 
             <button 
                key={asset}
-               className={`w-full h-10 text-center text-blue-900 text-[min(4vw,16px)] font-semibold bg-green-400 border-none rounded-xl cursor-pointer transition-all duration-200 ease-in-out md:flex-1 md:text-sm md:hover:bg-blue-500 md:text-white ${asset === selectedAsset ? "bg-blue-500 text-white" : ""}`}
+               className={`w-full h-10 text-center text-[min(4vw,16px)] font-semibold  border-none rounded-xl cursor-pointer transition-all duration-200 ease-in-out md:flex-1 md:text-sm md:hover:bg-blue-500 md:text-white ${asset === selectedAsset ? "bg-blue-500 text-white" : "bg-green-400 text-blue-900"}`}
                onClick={() => handleAssetClick(asset)}
             >
                {asset}
