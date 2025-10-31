@@ -15,8 +15,8 @@ export const SimulationResults = ({ data, onReset }) => {
   } = data;
 
   return (
-  <section className="w-full flex flex-col gap-5">
-   <h2 className="text-blue-950 font-semibold text-[min(6vw,2rem)]">
+  <section className="w-full px-5 flex flex-col gap-5">
+   <h2 className="text-blue-950 font-semibold text-[min(6vw,1.5rem)]">
       Seus parâmetros
    </h2>
    <div className="w-full flex flex-col gap-3 mb-9 md:grid md:grid-cols-2 md:gap-6">
@@ -53,7 +53,7 @@ export const SimulationResults = ({ data, onReset }) => {
 
 
    <div className="flex flex-col gap-3">
-      <h2 className="text-blue-950 font-semibold text-[min(6vw,2rem)]">Resultado</h2>
+      <h2 className="text-blue-950 font-semibold text-[min(6vw,1.5rem)]">Resultado</h2>
       <div className="flex flex-col gap-3 md:grid md:grid-cols-2 md:gap-6">
          <div className="result-item">
             <h4 className="result-item-title">Valor Total Investido</h4>
