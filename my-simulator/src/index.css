@@ -39,7 +39,7 @@
 
 @layer components {
   .result-item-title {
-    @apply text-blue-950 font-semibold text-[min(5vw,16px)]
+    @apply text-blue-950 font-semibold text-[min(4vw,16px)]
   }
 }
 
@@ -99,5 +99,14 @@ body {
   padding: 28px 28px;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
+
+  @media (min-width: 768px) { 
+    body {
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+    padding: 28px 28px;
+    display: flex;
+    align-items: center;
+  }
+  }
