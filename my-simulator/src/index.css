@@ -13,6 +13,44 @@
   
 }
 
+@layer components {
+  .data-item {
+    @apply w-full h-9 bg-blue-600 flex flex-row justify-between items-center px-4 rounded-lg
+  }
+}
+
+@layer components {
+  .item-title {
+    @apply text-white font-semibold text-[min(3vw,16px)]
+  }
+}
+
+@layer components {
+  .asset {
+    @apply text-white font-semibold text-[min(3vw,16px)]
+  }
+}
+
+@layer components {
+  .result-item {
+    @apply w-full h-[70px] flex flex-col items-center gap-2.5 py-1 px-2 bg-gray-300 rounded-lg
+  }
+}
+
+@layer components {
+  .result-item-title {
+    @apply text-blue-950 font-semibold text-[min(5vw,16px)]
+  }
+}
+
+@layer components {
+  .result-item-p {
+    @apply text-[1.2rem] font-semibold
+  }
+}
+
+
+
 table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
