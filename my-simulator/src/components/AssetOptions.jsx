@@ -14,7 +14,7 @@ export const AssetOptions = ({ selectedAsset, onAssetChange }) => {
 
   return (
    <section className="w-full flex flex-col items-center gap-3.5 md:items-start">
-      <h1 className="text-blue-950 self-start">Opções de Ativo</h1>
+      <h1 className="text-blue-950 self-start font-bold text-[min(5vw,28px)]">Opções de Ativo</h1>
       <div className="w-full flex flex-col items-center gap-3.5 md:w-full md:flex md:flex-row md:gap-3">
          {assetOptions.map((asset) => (
 
