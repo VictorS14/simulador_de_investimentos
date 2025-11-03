@@ -15,7 +15,7 @@ export const SimulationResults = ({ data, onReset }) => {
   } = data;
 
   return (
-  <section className="w-full px-5 flex flex-col gap-5">
+  <section className="w-full md:min-w-3xl px-5 flex flex-col gap-5">
    <h2 className="text-blue-950 font-semibold text-[min(6vw,1.5rem)]">
       Seus parâmetros
    </h2>
